@@ -26,11 +26,11 @@ public class ArraylistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_arraylist);
 
          list=new ArrayList<>();
-         list.add(new Item("this is my 1st item",R.drawable.img,true,50));
-         list.add(new Item("this is my 2nd item",R.drawable.img,true,50));
-         list.add(new Item("this is my 3rd item",R.drawable.img,true,50));
-         list.add(new Item("this is my 4th item",R.drawable.img,true,50));
-         list.add(new Item("this is my 5th item",R.drawable.img,true,50));
+         list.add(new Item("this is my 1st item",R.drawable.pastelpink,true,50));
+         list.add(new Item("this is my 2nd item",R.drawable.pastelpink,true,50));
+         list.add(new Item("this is my 3rd item",R.drawable.pastelpink,true,50));
+         list.add(new Item("this is my 4th item",R.drawable.pastelpink,true,50));
+         list.add(new Item("this is my 5th item",R.drawable.pastelpink,true,50));
 
          //refrence to the list view so it can be programmed
          myListView =findViewById(R.id.myListView);

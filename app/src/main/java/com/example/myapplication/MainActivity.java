@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,10 +26,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener, DialogInterface.OnClickListener {
 
-
+// הגדרת תכונות
     private static final String TAG = "FIREBASE";
     private EditText editTextName, editTextPassword;
-private Button buttonLogin;
+    private Button buttonLogin;
+    private ImageView imagerow;
     private FirebaseAuth mAuth;
 
     @Override
@@ -36,16 +38,16 @@ private Button buttonLogin;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // returns a refrence to the instance of the project firebase
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();  // لكي نستطيع الوصول الى الفاير بيس الخاص بالبرويكت من العنان الذي في جوجل
 
         //findViewById returns reference to the object with the specefied id
-        buttonLogin=findViewById(R.id.buttonLogin);
+        imagerow=findViewById(R.id.imagerow);
         editTextName=findViewById(R.id.editTextName);
         editTextPassword=findViewById(R.id.editTextPassword);
        //sets the required button to response to long click ,otherwise wont
-        buttonLogin.setOnLongClickListener(this);
+        imagerow.setOnLongClickListener(this);
 
-        SharedPreferences sp=getSharedPreferences("setting",MODE_PRIVATE);
+        SharedPreferences sp=getSharedPreferences("setting",MODE_PRIVATE); // mode private فقط الابلكاتسيا يمكنها الوصول الر هاي الاابلكاتسيا وبتغدر تغييرها
         String email=sp.getString("email","");
         String password=sp.getString("password", "");
 
@@ -69,11 +71,11 @@ private Button buttonLogin;
             //open editor for editing
             SharedPreferences.Editor editor= sp.edit();
             //write the wanted setting
-            editor.putString("email",editTextName.getText().toString());
+            editor.putString("email",editTextName.getText().toString()); //
             editor.putString("password",editTextPassword.getText().toString());
 
-            //save the close file
-            editor.commit();
+            //save and close file
+            editor.commit(); // save שינויים
             //ntent.putExtra("name",editTextName.getText().toString());
 
             login(editTextName.getText().toString(),editTextPassword.getText().toString());
