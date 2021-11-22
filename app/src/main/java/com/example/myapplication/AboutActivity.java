@@ -12,12 +12,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class AboutActivity extends AppCompatActivity {
- private Button gotog;
+ //private Button gotog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // gotog=findViewById(R.id.gotog);
         setContentView(R.layout.activity_about);
-
     }
    // inflates the design of the required menu on the top of the activity
     @Override
@@ -34,12 +34,13 @@ public class AboutActivity extends AppCompatActivity {
                 break;
             case R.id.exitMenu:
              //close the app
+                this.finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
-    public void gotogallery(View view) {
+   /* public void gotogallery(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
-    }
+    }*/
 }

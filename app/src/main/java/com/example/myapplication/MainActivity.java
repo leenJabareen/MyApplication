@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     private Button buttonLogin;
     private ImageView imagerow;
     private FirebaseAuth mAuth;
+    private Intent musicIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         setContentView(R.layout.activity_main);
         // returns a refrence to the instance of the project firebase
         mAuth = FirebaseAuth.getInstance();  // لكي نستطيع الوصول الى الفاير بيس الخاص بالبرويكت من العنان الذي في جوجل
+        // this will start the service which in turn will the music
+        musicIntent=new Intent(this,MusicService.class);
+        startService(musicIntent);
 
         //findViewById returns reference to the object with the specefied id
         imagerow=findViewById(R.id.imagerow);
