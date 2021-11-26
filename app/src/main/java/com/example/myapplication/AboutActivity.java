@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +14,19 @@ import android.widget.Toast;
 
 public class AboutActivity extends AppCompatActivity {
  //private Button gotog;
+    private CardView cardView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        // gotog=findViewById(R.id.gotog);
         setContentView(R.layout.activity_about);
+        cardView=findViewById(R.id.cardView);
+        cardView.setRadius(5.0f);
+        cardView.setCardElevation(11.0f);
+        cardView.setUseCompatPadding(true);
+
+
     }
    // inflates the design of the required menu on the top of the activity
     @Override

@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     private ImageView imagerow;
     private FirebaseAuth mAuth;
     private Intent musicIntent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,27 +42,20 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         // this will start the service which in turn will the music
         musicIntent=new Intent(this,MusicService.class);
         startService(musicIntent);
-
         //findViewById returns reference to the object with the specefied id
         imagerow=findViewById(R.id.imagerow);
         editTextName=findViewById(R.id.editTextName);
         editTextPassword=findViewById(R.id.editTextPassword);
        //sets the required button to response to long click ,otherwise wont
         imagerow.setOnLongClickListener(this);
-
         SharedPreferences sp=getSharedPreferences("setting",MODE_PRIVATE); // mode private فقط الابلكاتسيا يمكنها الوصول الر هاي الاابلكاتسيا وبتغدر تغييرها
         String email=sp.getString("email","");
         String password=sp.getString("password", "");
-
         if(!email.equals("")&& !password.equals("")){
             editTextName.setText(email);
             editTextPassword.setText(password);
-
         }
-
     }
-
-
     public void login(View view) {
         //Intent intent=new Intent(this, AboutActivity.class);
         if(!editTextName.getText().toString().equals(""))
@@ -96,16 +88,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     }
     // بتوخد ايميل وباسوورد من الايديت تيكست وبتبعثهن للبعولا تاعت الفاير بيس عن طريق الانستانس
     //
-
-
-
-
     public void SignUp(View view){
         Intent intent = new Intent(this,SignUpActivity.class);
         startActivity(intent);
-
     }
-
     @Override
     public void onClick(DialogInterface dialog, int which) {
       if(which==dialog.BUTTON_POSITIVE){
@@ -116,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
           dialog.cancel();
       }
     }
-
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder= new AlertDialog.Builder(this);
