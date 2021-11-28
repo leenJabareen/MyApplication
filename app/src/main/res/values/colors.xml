@@ -13,4 +13,6 @@
     <color name="violet">#8813e4</color>
     <color name="blue_sky">#3d93d9</color>
     <color name="green_light">#5ff0f7</color>
+    <color name="shadowColor">#2E2E2E</color>
+    <color name="pastelpink">#FFBCBC</color>
 </resources>

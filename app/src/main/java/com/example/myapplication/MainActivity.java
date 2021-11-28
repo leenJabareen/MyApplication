@@ -5,6 +5,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
 // הגדרת תכונות
     private static final String TAG = "FIREBASE";
+    private static final int NOTIFICATION_REMINDER_NIGHT = 1;
     private EditText editTextName, editTextPassword;
     private Button buttonLogin;
     private ImageView imagerow;
@@ -55,6 +59,12 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             editTextName.setText(email);
             editTextPassword.setText(password);
         }
+        Intent notifyIntent = new Intent(this,NotificationReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast
+                (this, NOTIFICATION_REMINDER_NIGHT, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
+                1000 * 60 * 60 * 24, pendingIntent);
     }
     public void login(View view) {
         //Intent intent=new Intent(this, AboutActivity.class);
