@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/account.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/background_btn.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/custom_buttom.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/custom_button.xml" value="0.184375" />
@@ -22,14 +23,19 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/shape_loginbt.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/shoppingcart.xml" value="0.190625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/sign_in_with_gmail.xml" value="0.19375" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_about.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_about.xml" value="0.2768361581920904" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_arraylist.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_cart.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_home.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_profile.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_settings.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/item_row.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/menu/bottom_menu.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/menu/menu.xml" value="0.21" />
       </map>
     </option>
