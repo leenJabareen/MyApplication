@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "706926734368",
+    "project_id": "leen-s-application",
+    "storage_bucket": "leen-s-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706926734368:android:d09b2d36f5f84e4d542045",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706926734368-kj1judeq3fe1b8blbrdbpp4kvej9hlq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4WEAI7Sk8JY1ODspSjnYlSC_NgqsZ_Ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706926734368-kj1judeq3fe1b8blbrdbpp4kvej9hlq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
