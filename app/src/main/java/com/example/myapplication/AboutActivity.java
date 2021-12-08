@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,9 @@ import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AboutActivity extends AppCompatActivity {
     //private Button gotog;
@@ -26,6 +30,10 @@ public class AboutActivity extends AppCompatActivity {
     // private final int ID_PROFILE=4;
 
     //private CardView cardView;
+    private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
+    private FirebaseDatabase database = FirebaseDatabase.getInstance("https://leen-s-application-default-rtdb.europe-west1.firebasedatabase.app/");
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,12 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+        String UID=maFirebaseAuth.getUid();
+        DatabaseReference myRef = database.getReference("users/"+UID);
+        Toast.makeText(this, "UDI"+UID, Toast.LENGTH_SHORT).show();
+        Log.d("LEEEEEN", UID);
+        myRef.push().setValue(new Item("this is my first item",R.drawable.img_2,true,50));
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
