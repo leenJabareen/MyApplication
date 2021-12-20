@@ -12,6 +12,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/edittext_background.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/emailp.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/home.xml" value="0.190625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_pastel.xml" value="0.20364583333333333" />
@@ -24,7 +25,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/shape_loginbt.xml" value="0.2203125" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/shoppingcart.xml" value="0.190625" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/sign_in_with_gmail.xml" value="0.19375" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_about.xml" value="0.2768361581920904" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_about.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_arraylist.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />

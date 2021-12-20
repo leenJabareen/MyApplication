@@ -19,8 +19,11 @@ import android.widget.Toast;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class AboutActivity extends AppCompatActivity {
     //private Button gotog;
@@ -30,7 +33,10 @@ public class AboutActivity extends AppCompatActivity {
     // private final int ID_PROFILE=4;
 
     //private CardView cardView;
+    //Get instance of authintication project in FB console
     private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
+  //write a message to the dataBase
+    // gets the root of the real time database in the FB console
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://leen-s-application-default-rtdb.europe-west1.firebasedatabase.app/");
 
 
@@ -38,17 +44,35 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // gotog=findViewById(R.id.gotog);
         setContentView(R.layout.activity_about);
+
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         String UID=maFirebaseAuth.getUid();
-        DatabaseReference myRef = database.getReference("users/"+UID);
+        //build a ref for user related data in real time dataBase using user ID
+        DatabaseReference myRef = database.getReference("users/"+UID);//getRefrence returns a root
         Toast.makeText(this, "UDI"+UID, Toast.LENGTH_SHORT).show();
         Log.d("LEEEEEN", UID);
+        //Adds an item to the fireBase under the refranced specified
         myRef.push().setValue(new Item("this is my first item",R.drawable.img_2,true,50));
 
-    }
+        myRef.addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
+        for(DataSnapshot dataSnapshot:snapshot.getChildren()){
+            Item item1=dataSnapshot.getValue(Item.class);
+          //  list.add(item1);
+            //myAdapter.notifyDataSetChanged();
+        }
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+
+        }
+        });
+        }
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
