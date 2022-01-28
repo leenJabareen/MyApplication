@@ -25,6 +25,12 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         CardView card_view =root.findViewById(R.id.booksCard); // creating a CardView and assigning a value.
+        CardView card_view2=root.findViewById((R.id.elecrtronicCard));
+        CardView card_view3=root.findViewById(R.id.womenCard);
+        CardView card_view4=root.findViewById((R.id.menCard));
+        CardView card_view5=root.findViewById(R.id.babyStuffCard) ;
+        CardView card_view6=root.findViewById(R.id.shoesCard);
+
 
         card_view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,8 +39,42 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
-
-
+        card_view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                startActivity(i);
+            }
+        });
+        card_view3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                startActivity(i);
+            }
+        });
+        card_view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                startActivity(i);
+            }
+        });
+        card_view5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                startActivity(i);
+            }
+        });
+        card_view6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                startActivity(i);
+            }
+        });
         return root;
     }
+
 }

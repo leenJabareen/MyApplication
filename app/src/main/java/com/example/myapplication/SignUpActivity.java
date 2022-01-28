@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final String TAG ="FIREBASE" ;
-    private EditText editTextTextPassword, editTextTextEmailAddress,editTextName,editTextAdress;
+    private EditText editTextTextPassword, editTextTextEmailAddress,editTextName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         editTextTextEmailAddress=findViewById(R.id.editTextTextEmailAddress);
         editTextTextPassword=findViewById(R.id.editTextTextPassword);
         editTextName=findViewById(R.id.editTextName);
-        editTextAdress=findViewById(R.id.editTextAddress);
+
     }
     public void Submit(View view) {
         signup(editTextTextEmailAddress.getText().toString(),editTextTextPassword.getText().toString());

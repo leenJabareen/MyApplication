@@ -5,7 +5,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-public class NotificationReceiver extends BroadcastReceiver {
+public class
+
+NotificationReceiver extends BroadcastReceiver {
     @Override
     //this class is intiated when a braodcast
     public void onReceive(Context context, Intent intent) {
