@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "706926734368",
-    "project_id": "leen-s-application",
-    "storage_bucket": "leen-s-application.appspot.com"
+    "project_number": "590581001004",
+    "project_id": "leen-b5ce1",
+    "storage_bucket": "leen-b5ce1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:706926734368:android:d09b2d36f5f84e4d542045",
+        "mobilesdk_app_id": "1:590581001004:android:7a52a9d90389cfbfdfda89",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "706926734368-kj1judeq3fe1b8blbrdbpp4kvej9hlq5.apps.googleusercontent.com",
+          "client_id": "590581001004-3c4e89neh9hajnfr6k5du27p60gl9mkq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA4WEAI7Sk8JY1ODspSjnYlSC_NgqsZ_Ig"
+          "current_key": "AIzaSyCTZLLG0aeWxOP5eIeKCHVMyA45jFlXKio"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "706926734368-kj1judeq3fe1b8blbrdbpp4kvej9hlq5.apps.googleusercontent.com",
+              "client_id": "590581001004-3c4e89neh9hajnfr6k5du27p60gl9mkq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

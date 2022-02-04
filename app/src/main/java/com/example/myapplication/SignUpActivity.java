@@ -18,11 +18,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final String TAG ="FIREBASE" ;
     private EditText editTextTextPassword, editTextTextEmailAddress,editTextName;
+    private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
+    //write a message to the dataBase
+    // gets the root of the real time database in the FB console
+    private FirebaseDatabase database = FirebaseDatabase.getInstance("https://leen-s-application-default-rtdb.europe-west1.firebasedatabase.app/");
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +76,13 @@ public class SignUpActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//getRefrence returns a root
+                            String key = myRef.push().getKey();
+                            User u1 = new User(email,password, editTextName.getText().toString());
+                            u1.setKey(key);
+                            myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
+                            myRef.setValue(u1);
+
                             Intent i =new Intent (SignUpActivity.this,MainActivity.class);
                             startActivity(i);
                         } else {

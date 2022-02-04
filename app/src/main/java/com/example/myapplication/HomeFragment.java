@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
         card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
                 startActivity(i);
             }
         });
