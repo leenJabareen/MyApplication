@@ -20,6 +20,7 @@ public class CustomAdapter extends ArrayAdapter<Item> {
     private Context context;// the page that the datas are shown in it
     private int resource;// how tidy the data is
 // דריסה ב view
+    private TextView price;
     public CustomAdapter(@NonNull Context context, int resource, @NonNull List<Item> objects) {
         super(context, resource, objects);
         this.context =context;
@@ -38,7 +39,8 @@ public class CustomAdapter extends ArrayAdapter<Item> {
         Item item = getItem(position); //methodnfrom the android studio
         if (item != null) {
             ImageView imageView = view.findViewById(R.id.imageItem);
-            TextView textView=view.findViewById(R.id.textview1);
+            TextView textView=view.findViewById(R.id.descreption);
+            TextView textView2=view.findViewById(R.id.price);
             Button itemButton=view.findViewById(R.id.ItemButton);
             itemButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -46,8 +48,9 @@ public class CustomAdapter extends ArrayAdapter<Item> {
                     Toast.makeText(context, "this Item was added to shopping card", Toast.LENGTH_SHORT).show();
                                               }
             });
-                    imageView.setImageResource(item.getResid());
-            textView.setText(item.getDescriotion());
+            imageView.setImageResource(getItem(position).getResid());
+            textView.setText(getItem(position).getDescriotion());
+            textView2.setText((int)getItem(position).getPrice());
         }
         return view;
     }

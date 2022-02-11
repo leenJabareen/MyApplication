@@ -54,7 +54,7 @@ public class AboutActivity extends AppCompatActivity {
         Toast.makeText(this, "UDI"+UID, Toast.LENGTH_SHORT).show();
         Log.d("LEEEEEN", UID);
         //Adds an item to the fireBase under the refranced specified
-        myRef.push().setValue(new Item("this is my first item",R.drawable.img_2,true,50));
+        myRef.push().setValue(new Item("this is my first item",R.drawable.img_2,9,50));
 
         myRef.addValueEventListener(new ValueEventListener() {
         @Override

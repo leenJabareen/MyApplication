@@ -3,13 +3,13 @@ package com.example.myapplication;
 public class Item {
     private String descriotion;
     private int resid; // image id to be loaded
-    private boolean isHappy;
+    private double price ;
     private int amount;
     //Constructor
-    public Item(String descriotion, int resid, boolean isHappy, int amount) {
+    public Item(String descriotion, int resid, double price, int amount) {
         this.descriotion = descriotion;
         this.resid = resid;
-        this.isHappy = isHappy;
+        this.price = price;
         this.amount = amount;
     }
     // Getters and settes
@@ -29,12 +29,12 @@ public class Item {
         this.resid = resid;
     }
 
-    public boolean isHappy() {
-        return isHappy;
+    public double getPrice() {
+        return price;
     }
 
-    public void setHappy(boolean happy) {
-        isHappy = happy;
+    public void setPrice(double price) {
+        price = price;
     }
 
     public int getAmount() {
