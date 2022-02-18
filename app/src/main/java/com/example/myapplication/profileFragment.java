@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -102,9 +103,12 @@ public class profileFragment extends Fragment {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User u = snapshot.getValue(User.class);
-                //Mis Haneen To check
-                updateUserData(new User("leen.n.j2004@gmail.com","leen","13456"));
+                for(DataSnapshot dataSnapshot:snapshot.getChildren()) {
+                    User u = dataSnapshot.getValue(User.class);
+                    //Mis Haneen To check
+                    Log.i("Profile1111", "user" + u + " Id " + user.getUid() + " u" + u.getEmail() + u.getUserName() + u.getPassword());
+                    updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
+                }
             }
 
             @Override
@@ -112,6 +116,8 @@ public class profileFragment extends Fragment {
 
             }
         });
+
+
         return rootView;
     }
 }

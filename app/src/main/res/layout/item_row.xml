@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
-    android:padding="16dp"
-    >
+    android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/imageItem"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/harrypoterbook" />
-         <TextView
-             android:id="@+id/descreption"
-             android:layout_toRightOf="@id/imageItem"
-             android:layout_marginLeft="30dp"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="name"
-             />
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-    android:layout_margin="100dp"
-        android:layout_marginEnd="100dp"
-        android:text="16$"
-        android:textSize="10dp"
-        android:textColor="@color/black"/>
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/ItemButton"
-        android:layout_width="45dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="13dp"
-        android:layout_marginBottom="100dp"
-        android:text="add"
-        android:textSize="10sp" />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageItem"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:id="@+id/descreption"
+            android:layout_width="140dp"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="@color/purple"/>
+
+            <Button
+                android:id="@+id/ItemButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:background="@color/babyblue"
+                android:text="add" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

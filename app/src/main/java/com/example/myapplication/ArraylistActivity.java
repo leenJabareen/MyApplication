@@ -25,12 +25,34 @@ public class ArraylistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arraylist);
 
-         list=new ArrayList<>();
-         list.add(new Item("harry piter book",R.drawable.harrypoterbook,16,50));
-         list.add(new Item("this is my 2nd item",R.drawable.pastelpink,10,50));
-         list.add(new Item("Me before you",R.drawable.mebeforeyou,17,50));
-         list.add(new Item("wonder ",R.drawable.wonderbook,6,50));
-       //  list.add(new Item("this is my 5th item",R.drawable.pastelpink,7,50));
+        String category = getIntent().getStringExtra("category");
+        list=new ArrayList<>();
+
+        if(category.equals("books")) {
+            list.add(new Item("harry piter book", R.drawable.harrypoterbook, 16, 50));
+            list.add(new Item("this is my 2nd item", R.drawable.pastelpink, 10, 50));
+            list.add(new Item("Me before you", R.drawable.mebeforeyou, 17, 50));
+            list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
+            //  list.add(new Item("this is my 5th item",R.drawable.pastelpink,7,50));
+        }
+        if(category.equals("electronic")){
+
+
+        }
+        if(category.equals("women")){
+
+
+        }
+        if(category.equals("men")){
+
+        }
+        if(category.equals("babyStuff")){
+
+        }
+        if(category.equals("shoes")){
+
+        }
+
 
          //refrence to the list view so it can be programmed
          myListView =findViewById(R.id.myListView);

@@ -36,41 +36,48 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","books");
                 startActivity(i);
             }
         });
         card_view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","electronic");
+
                 startActivity(i);
             }
         });
         card_view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","women");
                 startActivity(i);
             }
         });
         card_view4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","men");
                 startActivity(i);
             }
         });
         card_view5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","babyStuff");
                 startActivity(i);
             }
         });
         card_view6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), ProfileActivity.class);
+                Intent i = new Intent(root.getContext(), ArraylistActivity.class);
+                i.putExtra("category","shoes");
                 startActivity(i);
             }
         });

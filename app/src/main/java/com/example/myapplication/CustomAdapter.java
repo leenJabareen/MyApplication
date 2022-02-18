@@ -50,7 +50,7 @@ public class CustomAdapter extends ArrayAdapter<Item> {
             });
             imageView.setImageResource(getItem(position).getResid());
             textView.setText(getItem(position).getDescriotion());
-            textView2.setText((int)getItem(position).getPrice());
+            textView2.setText(getItem(position).getPrice()+" ");
         }
         return view;
     }
