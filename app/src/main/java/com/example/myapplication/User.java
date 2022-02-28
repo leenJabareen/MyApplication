@@ -9,9 +9,9 @@ public class User {
     private String key;
 
     public User(String userName, String email, String password, String image, String adress, String key) {
+        this.userName = userName;
         this.email = email;
         this.password = password;
-        this.userName = userName;
         this.image = image;
         this.adress = adress;
         this.key = key;
@@ -20,10 +20,10 @@ public class User {
     public User() {
     }
 
-    public User(String email, String password, String userName) {
+    public User(String userName, String email, String password) {
+        this.userName = userName;
         this.email = email;
         this.password = password;
-        this.userName = userName;
     }
 
     public String getEmail() {

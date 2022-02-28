@@ -88,7 +88,7 @@ public class profileFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
-        userName = rootView.findViewById(R.id.editTextNameprofile);
+
      //   buttonSend = (Button) getView().findViewById(R.id.buttonSend);
 
         //Adding click listener
@@ -106,7 +106,7 @@ public class profileFragment extends Fragment {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()) {
                     User u = dataSnapshot.getValue(User.class);
                     //Mis Haneen To check
-                    Log.i("Profile1111", "user" + u + " Id " + user.getUid() + " u" + u.getEmail() + u.getUserName() + u.getPassword());
+                    Log.i("Profile1111", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
                     updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
                 }
             }

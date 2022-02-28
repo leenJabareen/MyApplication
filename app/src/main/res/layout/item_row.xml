@@ -17,12 +17,16 @@
             android:id="@+id/imageItem"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_gravity="left"/>
+            android:layout_gravity="left"
+            />
 
         <TextView
             android:id="@+id/descreption"
             android:layout_width="140dp"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+
+            android:text="opop"
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="106dp"
@@ -46,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="55dp"
                 android:background="@color/babyblue"
-                android:text="add" />
+                android:text="add"
+                />
         </LinearLayout>
 
 

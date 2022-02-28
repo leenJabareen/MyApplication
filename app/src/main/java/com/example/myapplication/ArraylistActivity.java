@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,27 +28,49 @@ public class ArraylistActivity extends AppCompatActivity {
         list=new ArrayList<>();
 
         if(category.equals("books")) {
-            list.add(new Item("harry piter book", R.drawable.harrypoterbook, 16, 50));
-            list.add(new Item("this is my 2nd item", R.drawable.pastelpink, 10, 50));
+            list.add(new Item("harry potter \n book", R.drawable.harrypoterbook, 16, 50));
+            list.add(new Item("the fault in our starts", R.drawable.tfios, 9, 50));
             list.add(new Item("Me before you", R.drawable.mebeforeyou, 17, 50));
             list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
-            //  list.add(new Item("this is my 5th item",R.drawable.pastelpink,7,50));
+           // list.add(new Item("1984",R.drawable.nike,12,30));
         }
         if(category.equals("electronic")){
-
+            list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
+            list.add(new Item("harry potter \n book", R.drawable.harrypoterbook, 16, 50));
+            list.add(new Item("the fault in our starts", R.drawable.tfios, 9, 50));
+            list.add(new Item("Me before you", R.drawable.mebeforeyou, 17, 50));
+            list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
+            //list.add(new Item("1984",R.drawable.nike,12,30));
 
         }
         if(category.equals("women")){
-
+            list.add(new Item("harry potter \n book", R.drawable.harrypoterbook, 16, 50));
+            list.add(new Item("the fault in our starts", R.drawable.tfios, 9, 50));
+            list.add(new Item("Me before you", R.drawable.mebeforeyou, 17, 50));
+            list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
+           // list.add(new Item("1984",R.drawable.nike,12,30));
 
         }
         if(category.equals("men")){
-
+            list.add(new Item("harry potter \n book", R.drawable.harrypoterbook, 16, 50));
+            list.add(new Item("the fault in our starts", R.drawable.tfios, 9, 50));
+            list.add(new Item("Me before you", R.drawable.mebeforeyou, 17, 50));
+            list.add(new Item("wonder ", R.drawable.wonderbook, 6, 50));
+            //list.add(new Item("1984",R.drawable.nike,12,30));
         }
         if(category.equals("babyStuff")){
+            list.add(new Item("baby bottle", R.drawable.babybottle, 9, 50));
+            list.add(new Item("baby pacefier", R.drawable.babypacefier, 9, 50));
+            list.add(new Item("baby basket", R.drawable.babybasket, 40, 50));
+            list.add(new Item(" baby bambers", R.drawable.bambers, 6, 50));
+//            list.add(new Item("1984",R.drawable.,12,30));
 
         }
         if(category.equals("shoes")){
+            list.add(new Item("nike Jordan clipart", R.drawable.nikesh, 100, 50));
+            list.add(new Item("nike Jordan green yellow", R.drawable.nikegreenyellow, 110, 50));
+            list.add(new Item("nike colourful", R.drawable.nikecolourfull, 90, 50));
+            list.add(new Item("nike new collection ", R.drawable.nikenew, 60, 50));
 
         }
 
