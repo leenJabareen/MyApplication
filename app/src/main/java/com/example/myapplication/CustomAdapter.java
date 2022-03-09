@@ -20,13 +20,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.List;
 // we take usually the data from the furebase but we havent learn it yet
 public class CustomAdapter extends ArrayAdapter<Item> {
-  /*  FirebaseDatabase database=FirebaseDatabase.getInstance("https://leen-s-application-default-rtdb.europe-west1.firebasedatabase.app/");
+    FirebaseDatabase database=FirebaseDatabase.getInstance("https://leen-s-application-default-rtdb.europe-west1.firebasedatabase.app/");
     private FirebaseAuth mAuth= FirebaseAuth.getInstance();
     String UID=mAuth.getUid();
-    DatabaseReference myRef=database.getReference("Cart/"+UID);*/
+    DatabaseReference myRef=database.getReference("Cart/"+UID);
     private Context context;// the page that the datas are shown in it
     private int resource;// how tidy the data is
-// דריסה ב view
+
+    // דריסה ב view
     private TextView price;
     public CustomAdapter(@NonNull Context context, int resource, @NonNull List<Item> objects) {
         super(context, resource, objects);
@@ -53,6 +54,7 @@ public class CustomAdapter extends ArrayAdapter<Item> {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context, "this Item was added to shopping card", Toast.LENGTH_SHORT).show();
+                    myRef.push().setValue(item);
                                               }
             });
             imageView.setImageResource(getItem(position).getResid());

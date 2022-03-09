@@ -78,7 +78,7 @@ public class SignUpActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//getRefrence returns a root
                             String key = myRef.push().getKey();
-                            User u1 = new User(email,password, editTextName.getText().toString());
+                            User u1 = new User(editTextName.getText().toString(),email,password);
                             u1.setKey(key);
                             myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
                             myRef.setValue(u1);
